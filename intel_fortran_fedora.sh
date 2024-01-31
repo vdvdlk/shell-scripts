@@ -12,6 +12,8 @@
 # sudo ./intel_fortran_fedora.sh
 # This script assumes that you don't have an existing installation
 
+# username=$USER
+
 # Create a temporary repo file
 tee > /tmp/oneAPI.repo << EOF
 [oneAPI]
@@ -27,10 +29,11 @@ EOF
 mv /tmp/oneAPI.repo /etc/yum.repos.d
 
 # Install ifx, ifort and mkl
-dnf install intel-oneapi-compiler-fortran-2024.0 intel-oneapi-mkl-2024.0 -y
+dnf install intel-oneapi-compiler-fortran intel-oneapi-mkl -y
 
 # Set the environment variables
 # ATTENTION: THIS STEP IS DONE FOR THE CURRENT USER
 # RUN THE NEXT COMMAND FOR EACH USER
-echo "source /opt/intel/oneapi/setvars.sh" >> .bash_profile
+# sudo -u "$username" echo "source /opt/intel/oneapi/setvars.sh" >> ~/.bash_profile
+echo "source /opt/intel/oneapi/setvars.sh" | sudo -u "$SUDO_USER" tee -a ~/.bash_profile > /dev/null
 # Restart the system or log off and log in again for the same user
