@@ -24,10 +24,6 @@ apt install intel-oneapi-compiler-fortran intel-oneapi-mkl -y
 
 # Set the environment variables
 # ATTENTION: THIS STEP IS DONE FOR THE CURRENT USER ONLY
-<<<<<<< HEAD
-echo "source /opt/intel/oneapi/setvars.sh" >> /home/"$SUDO_USER"/.bash_profile
-=======
 echo "source /opt/intel/oneapi/setvars.sh" >> /home/"$SUDO_USER"/.profile
->>>>>>> 8c5ff18 (Corrected the apt version for use the .profile file)
 chown "$SUDO_USER" /home/"$SUDO_USER"/.profile
 # Restart the system or log off and log in again to take effect
