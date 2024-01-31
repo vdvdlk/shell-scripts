@@ -7,7 +7,6 @@
 # https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2024-0/yum-dnf-zypper.html
 # https://www.intel.com/content/www/us/en/docs/fortran-compiler/get-started-guide/2022-2/get-started-on-linux.html
 
-# Tested for the package intel-oneapi-compiler-fortran-2024.0
 # This script should be run as sudo:
 # sudo ./intel_fortran_fedora.sh
 # This script assumes that you don't have an existing installation
@@ -32,8 +31,6 @@ mv /tmp/oneAPI.repo /etc/yum.repos.d
 dnf install intel-oneapi-compiler-fortran intel-oneapi-mkl -y
 
 # Set the environment variables
-# ATTENTION: THIS STEP IS DONE FOR THE CURRENT USER
-# RUN THE NEXT COMMAND FOR EACH USER
-# sudo -u "$username" echo "source /opt/intel/oneapi/setvars.sh" >> ~/.bash_profile
-echo "source /opt/intel/oneapi/setvars.sh" | sudo -u "$SUDO_USER" tee -a ~/.bash_profile > /dev/null
-# Restart the system or log off and log in again for the same user
+# ATTENTION: THIS STEP IS DONE FOR THE CURRENT USER ONLY
+echo "source /opt/intel/oneapi/setvars.sh" >> /home/"$SUDO_USER"/.bash_profile
+# Restart the system or log off and log in again to take effect
