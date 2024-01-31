@@ -11,8 +11,6 @@
 # sudo ./intel_fortran_fedora.sh
 # This script assumes that you don't have an existing installation
 
-# username=$USER
-
 # Create a temporary repo file
 tee > /tmp/oneAPI.repo << EOF
 [oneAPI]
