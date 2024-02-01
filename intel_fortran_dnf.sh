@@ -30,5 +30,14 @@ dnf install intel-oneapi-compiler-fortran intel-oneapi-mkl -y
 
 # Set the environment variables
 # ATTENTION: THIS STEP IS DONE FOR THE CURRENT USER ONLY
-echo "source /opt/intel/oneapi/setvars.sh" >> /home/"$SUDO_USER"/.bash_profile
+if grep -Fxq "source /opt/intel/oneapi/setvars.sh" /home/"$SUDO_USER"/.bash_profile
+then
+    echo "Environment variables already set"
+    echo ""
+else
+    echo "Setting environment variables"
+    { echo ""; echo "source /opt/intel/oneapi/setvars.sh"; } >> /home/"$SUDO_USER"/.bash_profile
+    echo "Environment variables ready"
+    echo ""
+fi
 # Restart the system or log off and log in again to take effect
