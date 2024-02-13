@@ -26,4 +26,4 @@ EOF
 mv /tmp/oneAPI.repo /etc/yum.repos.d
 
 # Install ifx, ifort and mkl
-dnf install intel-oneapi-compiler-fortran intel-oneapi-mkl -y
+dnf install -y intel-oneapi-compiler-fortran intel-oneapi-mkl
