@@ -19,5 +19,5 @@ wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCT
 echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
 
 # Install ifx, ifort and mkl
-apt update
-apt install -y intel-oneapi-compiler-fortran intel-oneapi-mkl
+apt-get update
+apt-get --assume-yes install intel-oneapi-compiler-fortran intel-oneapi-mkl
