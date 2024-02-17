@@ -13,10 +13,10 @@
 
 # download the key to system keyring
 wget -qO - https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB |
-    gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/oneapi-archive-keyring.gpg >/dev/null
+    gpg --dearmor | tee /etc/apt/trusted.gpg.d/oneapi-archive-keyring.gpg >/dev/null
 
 # add signed entry to apt sources and configure the APT client to use Intel repository:
-echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
+echo "deb https://apt.repos.intel.com/oneapi all main" | tee /etc/apt/sources.list.d/oneAPI.list
 
 # Install ifx, ifort and mkl
 apt-get update
