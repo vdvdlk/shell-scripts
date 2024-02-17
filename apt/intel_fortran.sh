@@ -12,7 +12,7 @@
 # This script assumes that you don't have an existing installation
 
 # download the key to system keyring
-wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB |
+wget -qO - https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB |
     gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/oneapi-archive-keyring.gpg >/dev/null
 
 # add signed entry to apt sources and configure the APT client to use Intel repository:
