@@ -24,6 +24,13 @@ Architectures: amd64
 Signed-By: $keypath
 EOF
 
+# Limits what the repo can install
+tee >/etc/apt/preferences.d/google-chrome.pref <<EOF
+Package: *
+Pin: origin dl.google.com/linux/chrome
+Pin-priority: 100
+EOF
+
 # Install Google Chrome
 apt-get update
 apt-get --assume-yes install google-chrome-stable

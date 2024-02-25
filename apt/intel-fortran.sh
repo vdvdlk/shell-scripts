@@ -25,6 +25,13 @@ Components: main
 Signed-By: $keypath
 EOF
 
+# Limits what the repo can install
+tee >/etc/apt/preferences.d/oneAPI.pref <<EOF
+Package: *
+Pin: origin apt.repos.intel.com/oneapi
+Pin-priority: 100
+EOF
+
 # Install ifx, ifort and mkl
 apt-get update
 apt-get --assume-yes install intel-oneapi-compiler-fortran intel-oneapi-mkl

@@ -23,6 +23,13 @@ Components: non-free
 Signed-By: $keypath
 EOF
 
+# Limits what the repo can install
+tee >/etc/apt/preferences.d/spotify.pref <<EOF
+Package: *
+Pin: origin repository.spotify.com
+Pin-priority: 100
+EOF
+
 # Install Spotify
 apt-get update
 apt-get --assume-yes install spotify-client

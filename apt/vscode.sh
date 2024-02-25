@@ -24,6 +24,13 @@ Architectures: amd64 arm64 armhf
 Signed-By: $keypath
 EOF
 
+# Limits what the repo can install
+tee >/etc/apt/preferences.d/vscode.pref <<EOF
+Package: *
+Pin: origin packages.microsoft.com/repos/code
+Pin-priority: 100
+EOF
+
 # Install VSCode
 apt-get update
 apt-get --assume-yes install code
