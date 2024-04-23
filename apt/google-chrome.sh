@@ -7,7 +7,7 @@
 # https://www.google.com/linuxrepositories/
 
 keyserver="https://dl.google.com/linux/linux_signing_key.pub"
-keypath="/etc/apt/keyrings/google.gpg"
+keypath="/etc/apt/keyrings/google-chrome.gpg"
 
 # Download the key to system keyring
 curl -sS $keyserver | gpg --dearmor --yes -o $keypath
@@ -41,3 +41,6 @@ tee >/etc/apt/sources.list.d/google-chrome.list <<EOF
 # You may comment out this entry, but any other modifications may be lost.
 # deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 EOF
+
+# Removes the automatically installed key
+rm -f /etc/apt/trusted.gpg.d/google-chrome.gpg

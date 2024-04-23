@@ -12,7 +12,7 @@ keypath="/etc/apt/keyrings/packages.microsoft.gpg"
 # Download the key to system keyring
 curl -sS $keyserver | gpg --dearmor --yes -o $keypath
 
-# Create a temporary repo file
+# Create the repo file
 tee >/etc/apt/sources.list.d/vscode.sources <<EOF
 X-Repolib-Name: Visual Studio Code
 Enabled: yes
