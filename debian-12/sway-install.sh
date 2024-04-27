@@ -2,16 +2,16 @@
 # THIS SCRIPT SHOULD BE RUN AS SUDO!
 
 # sway
-apt-get install --assume-yes sway sway-backgrounds swaybg swayidle swaylock xdg-desktop-portal-wlr xwayland waybar wofi gammastep
+apt-get install --assume-yes sway sway-backgrounds swaybg swayidle swaylock xdg-desktop-portal-wlr xwayland waybar wofi
+
+# gammastep
+apt-get install --assume-yes gammastep wlsunset
 
 # SDDM
 apt-get install --assume-yes --no-install-recommends sddm
 
 # Thunar
 apt-get install --assume-yes thunar thunar-archive-plugin thunar-dropbox-plugin nautilus-dropbox
-
-# Firefox
-apt-get install --assume-yes firefox-esr firefox-esr-l10n-pt-br
 
 # Libreoffice
 apt-get install --assume-yes libreoffice libreoffice-l10n-pt-br libreoffice-texmaths ttf-mscorefonts-installer
@@ -21,6 +21,9 @@ apt-get install --assume-yes flatpak snapd
 
 # Vim
 apt-get install --assume-yes vim
+
+# Remmina
+apt-get install --assume-yes remmina
 
 # Syncthing
 apt-get install --assume-yes syncthing
@@ -38,7 +41,7 @@ apt-get install --assume-yes vlc
 apt-get install --assume-yes galculator neofetch
 
 # Fonts
-apt-get install --assume-yes fonts-recommended fonts-font-awesome
+# apt-get install --assume-yes fonts-recommended fonts-font-awesome
 
 # LaTeX
 apt-get install --assume-yes texlive-full
