@@ -13,9 +13,6 @@ apt-get install --assume-yes --no-install-recommends sddm
 # Thunar
 apt-get install --assume-yes thunar thunar-archive-plugin thunar-dropbox-plugin nautilus-dropbox
 
-# Libreoffice
-apt-get install --assume-yes libreoffice libreoffice-l10n-pt-br libreoffice-texmaths ttf-mscorefonts-installer
-
 # Package manager
 apt-get install --assume-yes flatpak snapd
 
@@ -38,7 +35,7 @@ apt-get install --assume-yes atril pdfarranger
 apt-get install --assume-yes vlc
 
 # Others
-apt-get install --assume-yes galculator neofetch
+apt-get install --assume-yes galculator neofetch htop calibre wxmaxima speedtest
 
 # Fonts
 # apt-get install --assume-yes fonts-recommended fonts-font-awesome
