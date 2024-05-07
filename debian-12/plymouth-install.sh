@@ -2,6 +2,6 @@
 # THIS SCRIPT SHOULD BE RUN AS SUDO!
 
 apt-get install --assume-yes \
-    gfortran \
-    fortran-language-server \
-    findent
+    plymouth \
+    plymouth-themes \
+    firmware-linux
