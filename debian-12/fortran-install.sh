@@ -4,4 +4,6 @@
 apt-get install --assume-yes \
     gfortran \
     fortran-language-server \
-    findent
+    findent \
+    liblapack-dev \
+    libblas-dev
