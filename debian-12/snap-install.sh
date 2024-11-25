@@ -2,6 +2,7 @@
 # THIS SCRIPT SHOULD BE RUN AS SUDO!
 
 apt-get install --assume-yes \
-    plymouth \
-    plymouth-themes \
-    firmware-linux
+    snapd \
+    gnome-software-plugin-snap
+
+snap install core
